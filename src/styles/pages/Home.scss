@@ -1,0 +1,302 @@
+$border-color: #b5b5b5;
+$progress-bar-color: #a1a1a194;
+$progress-value-color-low: #FC6976;
+$progress-value-color-medium: #fc9f69;
+$progress-value-color-high: #29c9c6;
+$progress-value-color-very-high: #29C9B3;
+
+.home-content-main-box-dark {
+    background-color: #303030;
+    --process-button-hover: #3b3b3b;
+}
+
+.home-content-main-box-light {
+    background-color: #f5f5f5;
+    --process-button-hover: #F8F8FA;
+}
+
+.Home {
+    min-height: calc(100vh - 55px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .home-image {
+        width: clamp(50px, 40%, 250px);
+        height: clamp(50px, 40%, 250px);
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .home-container {
+        height: 100%;
+        width: 100%;
+        padding: 0 20px 20px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 20px;
+
+        .home-wrapper {
+            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+        }
+    }
+
+    .home-title {
+        word-spacing: 2px;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .home-content-box-percentages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        min-height: 350px;
+        max-height: 58vh;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4px);
+        border: 1px solid $border-color;
+        animation-name: slideInFromLeft;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+
+        .home-content-percentages-title {
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .home-content-item-percentages-container {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 0 10px;
+            overflow-y: auto;
+        }
+
+        .home-content-process-btn {
+            border-radius: 8px;
+            padding: 10px 10px 0 10px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: var(--process-button-hover);
+            }
+        }
+
+        .home-content-process-noprocess {
+            font-weight: 500;
+            text-align: center;
+            font-size: 150%;
+        }
+
+        .home-content-box-percentages-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+            border-bottom: 1px solid $border-color;
+
+
+            .home-content-box-percentages-item-top,
+            .home-content-box-percentages-item-bottom {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .percentage-value {
+                    width: 60px;
+                    text-align: center;
+                    font-weight: 500;
+                    padding: 4px 0;
+                    border-radius: 20px;
+
+                    &.percentage-low {
+                        background-color: $progress-value-color-low;
+                    }
+
+                    &.percentage-medium {
+                        background-color: $progress-value-color-medium;
+                    }
+
+                    &.percentage-high {
+                        background-color: $progress-value-color-high;
+                    }
+
+                    &.percentage-very-high {
+                        background-color: $progress-value-color-very-high;
+                    }
+                }
+
+                .progress {
+                    width: 100%;
+                    height: 10px;
+                    border-radius: 5px;
+                    background-color: $progress-bar-color;
+                    overflow: hidden;
+
+                    .progress-value {
+                        height: 100%;
+
+                        &.percentage-low {
+                            background-color: $progress-value-color-low;
+                        }
+
+                        &.percentage-medium {
+                            background-color: $progress-value-color-medium;
+                        }
+
+                        &.percentage-high {
+                            background-color: $progress-value-color-high;
+                        }
+
+                        &.percentage-very-high {
+                            background-color: $progress-value-color-very-high;
+                        }
+                    }
+                }
+            }
+
+            .home-content-box-percentages-item-border-light {
+                border-color: #a1a1a194;
+                text-align: left;
+            }
+
+            .home-content-box-percentages-item-border-dark {
+                border-color: #5f5f5fa6;
+                text-align: left;
+            }
+        }
+
+        .home-content-start-process-button {
+            border: 1px solid #29C9B3;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            align-self: center;
+
+            &:hover {
+                background-color: #29C9B3;
+            }
+
+            @media (max-width: 900px) {
+                position: relative;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                bottom: 0;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .home-floating-buttons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        z-index: 200;
+
+        .home-floating-button {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #FC6976;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #29C9B3;
+
+                .home-floating-button-modal-description {
+                    opacity: 1;
+                }
+            }
+
+            .home-floating-button-modal-description {
+                opacity: 0;
+                position: absolute;
+                left: -20%;
+                transform: translateX(-100%);
+                transition: opacity 0.3s ease;
+            }
+        }
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .Home {
+        height: 100% !important;
+
+        .home-container {
+            height: 100% !important;
+            flex-direction: column !important;
+            align-items: center !important;
+
+            .home-content-box-percentages {
+                padding: 10px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.ProcessResult {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 55px);
+
+    .ProcessResult-output {
+        gap: 0 3px;
+        display: inline-flex;
+        align-items: baseline;
+    }
+
+    .ProcessResult-underStep {
+        padding-left: 1em;
+    }
+
+    .StartNewProcess-Btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+
+        .StartNewProcess-Icon {
+            padding-right: 0.5rem;
+        }
+    }
+    
+    .StartNewProcess-Btn:hover {
+        text-decoration: underline;
+    }
+
+    .ProcessResult-Requires {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 8px;
+        padding: 2em;
+
+        .ProcessResult-Title {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.875rem;
+        }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 24px;
+
+            .update-btn-container {
+                background-color: #29C9B3;
+                padding: 6px;
+                border-radius: 12px;
+                color: white;
+
+                .update-personal-info-btn {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    border: none;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 16px;
+                    border-radius: 4px;
+
+                    .update-personal-info-icon {
+                        font-size: 1.2rem;
+                        margin-top: 2px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ProcessResult-Checkbox-Container {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .ProcessResult-Checkbox {
+            :checked, :after {
+                border-width: 0 3px 3px 0;
+            }
+        }
+    }
+}
+
+// LIGHT THEME
+.ProcessResult-light {
+    --background-color: #ffffff;
+    --text-color: black;
+    --new-process-button-color: #ECEFF1;
+    --border-shadow: 0px 10px 10px -7px rgba(0,0,0,0.1), 0px 5px 10px 5px rgba(0,0,0,0.2);
+    --box-color: white;
+    --checkbox-color: #29C9B3;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    .ProcessResult-Requires {
+        -webkit-box-shadow: var(--border-shadow);
+        box-shadow: var(--border-shadow);
+        background-color: var(--box-color);
+    }
+    
+    .ProcessResult-Checkbox-Container {
+        .ProcessResult-Checkbox {
+            accent-color: var(--checkbox-color);
+        }
+    }
+}
+
+// DARK THEME
+.ProcessResult-dark {
+    --background-color: #303030;
+    --text-color: white;
+    --new-process-button-color: rgb(183, 193, 207);
+    --box-color: #222222;
+    --checkbox-color: #29C9B3;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    .ProcessResult-Requires {
+        background-color: var(--box-color);
+    }
+    
+    .ProcessResult-Checkbox-Container {
+        .ProcessResult-Checkbox {
+            accent-color: var(--checkbox-color);
+        }
+    }
+}

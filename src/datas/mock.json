@@ -1,0 +1,396 @@
+{
+  "user_table": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "email": "john@example.com",
+      "password": "test",
+      "language": "english",
+      "name": "Doe",
+      "firstname": "John",
+      "address": "123 Main Street",
+      "profile_picture": "assets/avatar/no_avatar.png",
+      "age": 30,
+      "number_phone": "+1234567890",
+      "token": "jwt_token_1",
+      "google_token": null,
+      "facebook_token": null,
+      "email_verified": true,
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "admin_user",
+      "email": "admin@example.com",
+      "password": "test",
+      "language": "english",
+      "name": "Admin",
+      "firstname": "Super",
+      "address": "456 Admin Street",
+      "profile_picture": "assets/avatar/no_avatar.png",
+      "age": 35,
+      "number_phone": "+1987654321",
+      "token": "jwt_token_2",
+      "google_token": "google_token_1",
+      "facebook_token": null,
+      "email_verified": true,
+      "role": "admin"
+    }
+  ],
+  "process": [
+    {
+      "id": 1,
+      "title": "Visa Application"
+    },
+    {
+      "id": 2,
+      "title": "Resident Permit"
+    }
+  ],
+  "questions": [
+    {
+      "step_id": 1,
+      "question": "Do you have a valid passport?",
+      "answer": {
+        "step_id": 1,
+        "response": "true",
+        "underQuestions": [
+          {
+            "step_id": 11,
+            "question": "Is your passport valid for at least 6 months?",
+            "response": "true"
+          },
+          {
+            "step_id": 12,
+            "question": "Do you have blank visa pages?",
+            "response": "true"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 2,
+      "question": "Do you have proof of financial means?",
+      "answer": {
+        "step_id": 2,
+        "response": "true",
+        "underQuestions": [
+          {
+            "step_id": 21,
+            "question": "Do you have a bank account?",
+            "response": "true"
+          },
+          {
+            "step_id": 22,
+            "question": "Do you have a valid credit card?",
+            "response": "true"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 3,
+      "question": "Have you completed the visa application form?",
+      "answer": {
+        "step_id": 3,
+        "response": "false",
+        "underQuestions": [
+          {
+            "step_id": 31,
+            "question": "Have you filled out the form correctly?",
+            "response": "false"
+          }
+        ]
+      }
+    }
+  ],
+  "step": [
+    {
+      "id": 1,
+      "is_unique": true,
+      "delay": "0-1-0",
+      "process_id": 1
+    },
+    {
+      "id": 2,
+      "is_unique": false,
+      "delay": "0-2-0",
+      "process_id": 1
+    }
+  ],
+  "step_answer": [
+    {
+      "step_id": 1,
+      "title": "Step title",
+      "description": "Step description",
+      "type": "Document",
+      "source": "link",
+      "is_done": false,
+      "under_steps": [
+        {
+          "id": 1,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        }
+      ]
+    },
+    {
+      "step_id": 2,
+      "title": "Step title",
+      "description": "Step description",
+      "type": "Document",
+      "source": "link",
+      "is_done": false,
+      "under_steps": [
+        {
+          "id": 2,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        },
+        {
+          "id": 3,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        },
+        {
+          "id": 4,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        }
+      ]
+    },
+    {
+      "step_id": 3,
+      "title": "Step title",
+      "description": "Step description",
+      "type": "Document",
+      "source": "link",
+      "is_done": false,
+      "under_steps": [
+        {
+          "id": 3,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        },
+        {
+          "id": 4,
+          "title": "Under step title",
+          "description": "Under step description",
+          "type": "Document",
+          "source": "link",
+          "is_done": false
+        }
+      ]
+    }
+  ],
+  "user_process": [
+    {
+      "id": 4575,
+      "is_done": false,
+      "start_process_date": "2024-01-15",
+      "end_process_date": null,
+      "expire_date": null,
+      "user_id": 1,
+      "process_id": 1,
+      "title": "Visa Application",
+      "process_title": "Visa Application",
+      "stocked_title": "Visa Application",
+      "pourcentage": 25,
+      "userProcess": {
+        "title": "Visa Application",
+        "stocked_title": "Visa Application"
+      }
+    },
+    {
+      "id": 54545,
+      "is_done": false,
+      "start_process_date": "2024-01-15",
+      "end_process_date": null,
+      "expire_date": null,
+      "user_id": 1,
+      "process_id": 2,
+      "process_title": "Resident Permit",
+      "stocked_title": "Resident Permit",
+      "pourcentage": 80,
+      "userProcess": {
+        "title": "Resident Permit",
+        "stocked_title": "Resident Permit"
+      }
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2025-04-15T14:55:00.000Z",
+      "user_process_id": 4575,
+      "process_title": "Visa Application",
+      "stocked_title": "VisaLongTerm",
+      "step_id": 1752456378245,
+      "step_title": "Check the passport",
+      "step_description": "Check if the passport is valid for at least 6 months"
+    },
+    {
+      "date": "2075-04-16T23:10:00.000Z",
+      "user_process_id": 4575,
+      "process_title": "Visa long term",
+      "stocked_title": "VisaLongTerm",
+      "step_id": 234530727,
+      "step_title": "Submit the documents",
+      "step_description": "Go the office and submit the documents"
+    },
+    {
+      "date": "2042-04-17T06:21:30.000Z",
+      "user_process_id": 54545,
+      "process_title": "Resident Permit",
+      "stocked_title": "ResidentPermit",
+      "step_id": 1454553,
+      "step_title": "Documents",
+      "step_description": "Check all documents if they are valid"
+    },
+    {
+      "date": "2025-04-18T18:00:00.000Z",
+      "user_process_id": 54545,
+      "process_title": "Resident Permit",
+      "stocked_title": "ResidentPermit",
+      "step_id": 264567862,
+      "step_title": "I'm hungry",
+      "step_description": "Send the documents and go to the shopping center to buy some foods"
+    }
+  ],
+  "list_events": [
+    {
+      "key": 1,
+      "date": "2025-04-15T14:55:00.000Z",
+      "process_title": "Visa Application",
+      "stocked_title": "Student Visa",
+      "step_title": "Check the passport",
+      "step_description": "Check if the passport is valid for at least 6 months",
+      "user_process_id": 4575,
+      "step_id": 1752456378245
+    },
+    {
+      "key": 2,
+      "date": "2075-04-16T23:10:00.000Z",
+      "process_title": "Visa Application",
+      "stocked_title": "Student Visa",
+      "step_title": "Document Submission",
+      "step_description": "Go the office and submit the documents",
+      "user_process_id": 45751,
+      "step_id": 1752456378245
+    },
+    {
+      "key": 3,
+      "date": "2042-04-17T06:21:30.000Z",
+      "process_title": "Resident Permit",
+      "stocked_title": "Home living",
+      "step_title": "Document Check",
+      "step_description": "Check all documents if they are valid",
+      "user_process_id": 54545,
+      "step_id": 1752456378245
+    },
+    {
+      "key": 4,
+      "date": "2025-04-18T18:00:00.000Z",
+      "process_title": "Resident Permit",
+      "stocked_title": "Home living",
+      "step_title": "Food Shopping",
+      "step_description": "Send the documents and go to the shopping center to buy some foods",
+      "user_process_id": 54545,
+      "step_id": 1752456378245
+    }
+  ],
+  "user_step": [
+    {
+      "id": 100000,
+      "step_title": "Visa Application",
+      "step_description": "Check if the passport is valid for at least 6 months",
+      "step_id": 1752456378245,
+      "is_done": false,
+      "start_date": "2024-01-15",
+      "end_date": null,
+      "delay": "2024-02-15",
+      "appoinment": "2025-04-15T14:55:00.000Z",
+      "user_process_id": 4575
+    },
+    {
+      "id": 200000,
+      "step_title": "Visa Application",
+      "step_description": "Go the office and submit the documents",
+      "step_id": 234530727,
+      "is_done": false,
+      "start_date": "2024-01-15",
+      "end_date": null,
+      "delay": "2024-02-15",
+      "appoinment": "2075-04-16T23:10:00.000Z",
+      "user_process_id": 45751
+    },
+    {
+      "id": 300000,
+      "step_title": "Resident Permit",
+      "step_description": "Check all documents if they are valid",
+      "step_id": 1454553,
+      "is_done": false,
+      "start_date": "2024-01-15",
+      "end_date": null,
+      "delay": "2024-02-15",
+      "appoinment": "2042-04-17T06:21:30.000Z",
+      "user_process_id": 54545
+    },
+    {
+      "id": 400000,
+      "step_title": "Resident Permit",
+      "step_description": "Send the documents and go to the shopping center to buy some foods",
+      "step_id": 264567862,
+      "is_done": false,
+      "start_date": "2024-01-15",
+      "end_date": null,
+      "delay": "2024-02-15",
+      "appoinment": "2025-04-18T18:00:00.000Z",
+      "user_process_id": 545451
+    }
+  ],
+  "user_under_step": [
+    {
+      "id": 1,
+      "step_id": 1,
+      "is_done": false,
+      "user_process_id": 1
+    }
+  ],
+  "process_proposal": [
+    {
+      "label": "Visa Application",
+      "stocked_title": "Visa Application"
+    },
+    {
+      "label": "Resident Permit",
+      "stocked_title": "Resident Permit"
+    },
+    {
+      "label": "Immigration",
+      "stocked_title": "Immigration"
+    },
+    {
+      "label": "Passport",
+      "stocked_title": "Passport"
+    },
+    {
+      "label": "Driving License",
+      "stocked_title": "Driving License"
+    }
+  ]
+}

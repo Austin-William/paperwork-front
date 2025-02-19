@@ -1,0 +1,38 @@
+.languages {
+    --text-color: #ececec !important;
+    --select-bg: rgba(255, 255, 255, 0.2);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --arrow-bg: rgba(255, 255, 255, 0.103);
+
+    position: relative;
+    padding: 0 10px;
+    max-width: 150px;
+    width: 100%;
+    margin-left: 10px;
+
+    select {
+        appearance: none;
+        border: 0;
+        outline: 0;
+        width: 100%;
+        padding: 0.3em;
+        background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 2em, var(--select-bg) 3em);
+        color: white;
+        border-radius: 0.25em;
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        option {
+            color: black !important;
+            background-color: var(--select-bg);
+        }
+    }
+}
