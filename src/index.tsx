@@ -1,7 +1,8 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-
 import { BrowserRouter } from "react-router-dom";
+
+import { Analytics } from "@vercel/analytics/react"
 
 import App from './App';
 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    <Analytics />
   </StrictMode>,
   document.getElementById('root')
 );
