@@ -22,7 +22,8 @@
   },
   "include": [
     "src",
-    "public/assets",
+    "public/assets/**/*",
+    "public/files/**/*",
     "public/logo.png",
     "**/*.ts",
     "**/*.tsx"
