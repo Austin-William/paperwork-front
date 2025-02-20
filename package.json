@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.5",
     "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
+    "gh-pages": "^6.3.0",
     "i18next": "^22.5.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-styled-components": "^7.0.8",
@@ -40,7 +41,9 @@
     "test:coverage": "jest --silent --coverage=true",
     "test:coverage:log": "jest --coverage=true",
     "test:all": "jest --watchAll --coverage=true",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "testEnvironment": "jsdom",
