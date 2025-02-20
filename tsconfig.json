@@ -22,7 +22,8 @@
   },
   "include": [
     "src",
-    "public/Logo.tsx",
+    "public/assets",
+    "public/logo.png",
     "**/*.ts",
     "**/*.tsx"
   ]
